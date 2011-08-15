@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<title>tmpload - Asynchronous Template Loading and Caching for jQuery Templates</title>
+		<link href="http://fonts.googleapis.com/css?family=Dancing+Script:regular" rel="stylesheet" type="text/css" >
+		<link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div id="container">
+			<h1>tmpload</h1>
+			<h2>Asynchronous Template Loading and Caching<br />for jQuery Templates</h2>
+			<div id="download">
+				<a href="http://github.com/markdalgleish/tmpload/raw/master/tmpload.min.js">
+					download tmpload<em><1KB minified</em>
+				</a>
+			</div>
+			<p>Loading your templates from external files is <strong>awesome</strong>.</p>
+			<p>Loading your templates only moments before they're needed is <strong>even awesomer</strong>.</p>
+			<hr />
+			<h3>Declare one template</h3>
+			
+<pre class="prettyprint">
+$.tmpload('search', 'path/to/search.tmpl');
+</pre>
+
+			<h3>Or declare groups of templates</h3>
+			
+<pre class="prettyprint">
+$.tmpload([
+  {
+    name: 'search',
+    url: 'path/to/search.tmpl'
+  },
+  {
+    name: 'comments',
+    url: 'path/to/comments.tmpl'
+  }
+]);
+</pre>
+
+			<p>These templates haven't downloaded yet (that's a good thing).</p>
+			<hr />		
+			<h3>Load and cache intelligently</h3>
+			
+<pre class="prettyprint">
+$('#search').focus(function(){
+  //They're probably about to search, so...
+  $.tmpload('search');
+});
+</pre>
+
+			<p>The search template is now downloaded and cached in the background.</p>		
+			<hr />		
+			<h3>Ready when they need it</h3>
+			
+<pre class="prettyprint">
+$.when(
+  $.tmpload('search'),
+  $.getJSON('path/to/data.json')
+).then(function(tmpl,data){
+  $.tmpl(tmpl,data).appendTo('#target');
+});
+</pre>
+
+			<p>The template is now loaded from the cache.</p>
+			<p>If the template isn't already cached, it is downloaded immediately and saved for later.</p>
+			<hr />
+			<ul class="buttons">
+				<li><a href="http://github.com/markdalgleish/tmpload/raw/master/tmpload-v1.0.min.js" id="downloadbutton">Download the plugin</a></li>
+				<li><a href="http://github.com/markdalgleish/tmpload" id="githubbutton">Contribute on GitHub</a></li>
+			</ul>
+			<p>
+				<small>&copy; 2011 <a href="http://www.markdalgleish.com" id="blog">Mark Dalgleish</a>. This plugin is released under the <a href="http://github.com/markdalgleish/tmpload/blob/master/MIT-LICENSE.txt" id="license">MIT License</a> <br />Follow me on Twitter! <a href="http://www.twitter.com/markdalgleish" id="twitter">@markdalgleish</a></small>
+			</p>
+		</div>
+		
+		<a href="http://github.com/markdalgleish/tmpload" id="github">Fork me on GitHub</a>
+		
+		<script>
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try{
+		var pageTracker = _gat._getTracker("UA-21855678-1");
+		pageTracker._trackPageview();
+		} catch(err) {}
+		</script>		
+		<script src="js/events.js"></script>
+		<script src="js/prettify.js"></script>
+		<script>prettyPrint();</script>
+	</body>
+</html>

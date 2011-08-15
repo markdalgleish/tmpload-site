@@ -1,0 +1,232 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	-webkit-text-size-adjust: none;
+}
+body {
+	background-color: #99CCFF;
+	background-image: -moz-linear-gradient(top, #89B7E5, #99CCFF);
+	background-image: -o-linear-gradient(top, #89B7E5, #99CCFF);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #89B7E5),color-stop(1, #99CCFF));
+	background-image: -webkit-linear-gradient(#89B7E5, #99CCFF);
+	background-image: linear-gradient(top, #89B7E5, #99CCFF);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#89B7E5', EndColorStr='#99CCFF');
+}
+#container {
+	-webkit-transform: rotate(0.0001deg);
+	margin: 0 auto;
+	max-width: 1024px;
+	position: relative;
+	width: 75%;
+}
+h1 {
+	color: #fff;
+	font-family: 'Dancing Script', georgia, serif;
+	font-size: 124pt;
+	margin-top: 13pt;
+	text-align: center;
+	text-shadow: 0 4px 2px #598ABB;
+}
+h2 {
+	-webkit-box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.05);
+	-moz-box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.05);
+	-o-box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.05);
+	background-color: #7CA6D0;
+	color: #fff;
+	font-family: calibri, helvetica, arial;
+	font-size: 30pt;
+	font-style: italic;
+	line-height: 36pt;
+	margin-bottom: 26pt;
+	padding: 10px 60px 13px 60px;
+	text-align: center;
+	text-shadow: 1px 2px 0px #598ABB;
+}
+#download a {
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;  
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+	-webkit-box-shadow: 0 0 10px #CCE6FF;
+	-moz-box-shadow: 0 0 10px #CCE6FF;
+	box-shadow: 0 0 10px #CCE6FF;
+	background-color: #7CA6D0;
+	color: #fff;
+	display: block;
+	font-family: calibri, helvetica, arial;
+	font-size: 14pt;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-decoration: none;
+	top: -20px;
+	width: 225px;
+}
+	#download a:hover {
+		-webkit-box-shadow: 0 0 20px #fff;
+		-moz-box-shadow: 0 0 20px #fff;
+		box-shadow: 0 0 20px #fff;
+		background-color: #6A9ACA;
+	}
+	#download a em {
+		display: block;
+		font-size: 10pt;
+		margin-top: 2px;
+	}
+h3 {
+	font-family: 'Dancing Script', georgia, serif;
+	font-size: 42pt;
+	text-shadow: 0 2px 1px #fff;
+	margin-bottom: 26pt;
+}
+p, ul {
+	color: #223A53;
+	font-family: calibri, helvetica, arial;
+	font-size: 18pt;
+	line-height: 26pt;
+	margin-bottom: 26pt;
+	text-shadow: 0 1px 0 #fff;
+}
+p a {
+	color: #0033cc;
+	text-decoration: none;
+}
+ul.buttons {
+	padding: 26pt 0;
+	text-align: center;
+}
+ul.buttons li {
+	display: inline-block;
+}
+ul.buttons a {
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;  
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 20px #89B7E5;
+	-moz-box-shadow: 0 0 20px #89B7E5;
+	box-shadow: 0 0 20px #89B7E5;
+	background-color: #fff;
+	color: #598ABB;
+	font-size: 21pt;
+	margin-right: 26pt;
+	padding: 10px 30px;
+	text-decoration: none;
+}
+	ul.buttons a:hover {
+		-webkit-box-shadow: 0 0 40px #598ABB;
+		-moz-box-shadow: 0 0 40px #598ABB;
+		box-shadow: 0 0 40px #598ABB;
+	}
+hr {
+	background-color: #808080;
+	border: 0;
+	height: 1px;
+	margin-bottom: 26pt;
+}
+strong {
+	color: #202020;
+	font-style: italic;
+}
+small {
+	display: block;
+	font-size: 12pt;
+	text-align: center;
+}
+
+/* Prettify */
+pre, .prettyprint {
+	-webkit-box-shadow: 0 0 20px #89B7E5;
+	-moz-box-shadow: 0 0 20px #89B7E5;
+	-o-box-shadow: 0 0 20px #89B7E5;
+	-ms-box-shadow: 0 0 20px #89B7E5;
+	box-shadow: 0 0 20px #89B7E5;
+	background-color: #CCE6FF;
+	font-family: monospace;
+	font-size: 16pt;
+	margin-bottom: 26pt;
+	padding: 13pt;
+	text-shadow: 0 1px 0 #fff;
+	#fff-space: pre-wrap;
+	#fff-space: -moz-pre-wrap;
+	#fff-space: -o-pre-wrap;
+}
+	pre span {
+		line-height: 26pt;
+	}
+	pre .com {
+		color: #663399;
+	}
+	pre .kwd {
+		color: #0033cc;
+		text-shadow: 1px 0 0 #0066cc;
+	}
+	pre .str {
+		color: #009933;
+	}
+
+#github {
+	background-image: url(../images/forkme.png);
+	border: 0;
+	height: 149px;
+	line-height: 500px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 149px;
+}
